@@ -146,7 +146,9 @@ public class MultiverseAdventure extends JavaPlugin implements MVPlugin {
     }
 
     public boolean isPortalsEnabled() {
-        return portals != null;
+        boolean doPortalReload = getConfig().getBoolean("doPortalReload", false);
+        if (doPortalReload) return portals != null;
+        else return false;
     }
 
     public MultiversePortals getPortals() {
