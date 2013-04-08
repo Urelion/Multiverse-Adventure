@@ -7,8 +7,10 @@ import com.onarandombox.MultiverseAdventure.commands.DisableCommand;
 import com.onarandombox.MultiverseAdventure.commands.EnableCommand;
 import com.onarandombox.MultiverseAdventure.commands.FlushCommand;
 import com.onarandombox.MultiverseAdventure.commands.ListCommand;
+import com.onarandombox.MultiverseAdventure.commands.LoadCommand;
 import com.onarandombox.MultiverseAdventure.commands.ResetCommand;
 import com.onarandombox.MultiverseAdventure.commands.SetTemplateCommand;
+import com.onarandombox.MultiverseAdventure.commands.UnloadCommand;
 import com.onarandombox.MultiverseAdventure.listeners.MVACoreListener;
 import com.onarandombox.MultiverseAdventure.listeners.MVAPlayerListener;
 import com.onarandombox.MultiverseAdventure.listeners.MVAPluginListener;
@@ -197,6 +199,8 @@ public class MultiverseAdventure extends JavaPlugin implements MVPlugin {
         this.commandHandler.registerCommand(new SetTemplateCommand(this));
         this.commandHandler.registerCommand(new ListCommand(this));
         this.commandHandler.registerCommand(new ResetCommand(this));
+        this.commandHandler.registerCommand(new LoadCommand(this));
+        this.commandHandler.registerCommand(new UnloadCommand(this));
 
         for (com.pneumaticraft.commandhandler.multiverse.Command c : this.commandHandler.getAllCommands()) {
             if (c instanceof HelpCommand) {
