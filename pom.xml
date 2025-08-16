@@ -203,7 +203,7 @@ and adjust the build number accordingly -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-nop</artifactId>
-            <version>1.6.1</version>
+            <version>1.7.36</version>
             <type>jar</type>
             <scope>compile</scope>
         </dependency>
